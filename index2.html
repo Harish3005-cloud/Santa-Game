@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Secret Santa</title>
+  <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+  <canvas id="snow"></canvas>
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="container">
+    <h1>🎅 Secret Santa 🎁</h1>
+
+    <p>Enter participant names (one per line):</p>
+    <textarea id="names" placeholder="Alice&#10;Bob&#10;Charlie"></textarea>
+
+    <p>Enter participant passwords (one per line, matching order):</p>
+    <textarea  id="passwords" placeholder="alice123&#10;bob456&#10;charlie789"></textarea>
+
+    <p>Enter wishlists (matching order):</p>
+    <textarea id="wishlists" placeholder="Books&#10;Chocolate&#10;Board Games"></textarea>
+
+    <button onclick="generateAssignments()">Generate Assignments</button>
+
+    <br /><br />
+
+    <select id="nameSelect" style="display:none"></select>
+    <input type="password" id="participantPassword" placeholder="Enter your password" style="display:none" />
+    <button id="revealBtn" style="display:none" onclick="revealSanta()">Reveal My Secret Santa</button>
+    <button id="downloadBtn" style="display:none" onclick="downloadAssignments()">Download Full List (Organizer)</button>
+
+    <div class="result" id="result"></div>
+    <div class="wishlist" id="wishlistDisplay"></div>
+  </div>
+
+  <script src="script2.js"></script>
+</body>
+</html>
